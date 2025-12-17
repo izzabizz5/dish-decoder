@@ -5,14 +5,10 @@ version: '3.8'
 
 services:
   dish-decoder:
-    # Replace OWNER with your GitHub username or organization
     image: ghcr.io/izzabizz5/dish-decoder:latest
     
-    # If you want to use a specific version instead of latest:
-    # image: ghcr.io/OWNER/dish-decoder:v1.0.0
-    
     ports:
-      - "3000:3000"
+      - "3001:3000"
     
     environment:
       - GEMINI_API_KEY=${GEMINI_API_KEY}
