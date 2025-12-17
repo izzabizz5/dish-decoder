@@ -271,6 +271,8 @@ Return the recipe data as valid JSON:`;
             responseMimeType: 'application/json'
           }
         });
+
+        console.log('Fallback model:', fallbackModel);
         
         result = await fallbackModel.generateContent(prompt);
         response = result.response;

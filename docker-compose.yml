@@ -1,0 +1,15 @@
+version: '3.8'
+
+# This docker-compose file builds the image locally from source
+# Use this for development or if you want to build from source
+
+services:
+  dish-decoder:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    restart: unless-stopped
